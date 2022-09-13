@@ -76,13 +76,12 @@ void processGyroData(){
 }
 
 void printData() {
-  //Serial.print("Gyro (deg)");
-  //Serial.print(" X=");
+  Serial.print("Gyro (deg)");
+  Serial.print(" X=");
   Serial.print(rotX);
   Serial.print(",");
-   
-  //Serial.print(" Y=");
- /* if (rotX > 75){
+   Serial.print(" Y=");
+  if (rotX > 75){
       step_count = step_count+1; 
       calorie=calorie+0.068; 
     }
@@ -91,28 +90,29 @@ void printData() {
       calorie=calorie+0.068;
       
     }
-   //Serial.print("; `");
+   Serial.print("; `");
     Serial.print(step_count);
     Serial.print(" ,");
-   Serial.println(calorie);%//
+   Serial.println(calorie);
   
   
- /** Serial.print(",");
+  Serial.print(",");
   Serial.print(rotY);
-  //Ser ial.print(" Z=");
+  Serial.print(" Z=");
   Serial.print(",");
   Serial.print(rotZ);
-  Serial.print(",");//Serial.print(" Accel (g)");
-  //Serial.print(" X=");
+  Serial.print(",");
+  Serial.print(" Accel (g)");
+  Serial.print(" X=");
   
   Serial.print(gForceX);
   Serial.print(",");
-  //Serial.print(" Y=");
+  Serial.print(" Y=");
   Serial.print(gForceY);
   Serial.print(",");
-  //Serial.print(" Z=");
+  Serial.print(" Z=");
   Serial.println(gForceZ);
-*/
+
 
 }
 
