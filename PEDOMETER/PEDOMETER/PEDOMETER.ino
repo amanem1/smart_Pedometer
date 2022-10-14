@@ -78,11 +78,11 @@ void printData() {
    Serial.print(" Y=");
   if (rotX > 75){
       step_count = step_count+1; 
-      calorie=stepcount*0.068; 
+      calorie=step_count*0.068; 
     }
     if(rotX < -20){
       step_count =step_count+1;
-      calorie=stepcount*0.068;
+      calorie=step_count*0.068;
       
     }
    Serial.print("; ");
