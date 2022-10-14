@@ -7,7 +7,7 @@ long gyroX, gyroY, gyroZ;
 float rotX, rotY, rotZ;
 long magx,magy,magz;
 float  step_count=0;
-float calorie=0;
+float calorie;
 
 
 void setup() {
