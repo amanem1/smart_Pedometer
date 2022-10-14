@@ -5,9 +5,8 @@ float gForceX, gForceY, gForceZ;
 
 long gyroX, gyroY, gyroZ;
 float rotX, rotY, rotZ;
-float x[]={};
 long magx,magy,magz;
-int step_count=0;
+float  step_count=0;
 float calorie=0;
 
 
@@ -68,10 +67,6 @@ void processGyroData(){
   rotX=gyroX/131.0;
   rotY=gyroY/131.0;
   rotZ=gyroZ/131.0;
-  for (int i=0;i<sizeof(x)/sizeof(x[0]);i++){
-    int j = rotX;
-    x[i]=j;
-    
   }
 }
 
@@ -83,19 +78,19 @@ void printData() {
    Serial.print(" Y=");
   if (rotX > 75){
       step_count = step_count+1; 
-      calorie=calorie+0.068; 
+      calorie=stepcount*0.068; 
     }
     if(rotX < -20){
       step_count =step_count+1;
-      calorie=calorie+0.068;
+      calorie=stepcount*0.068;
       
     }
-   Serial.print("; `");
+   Serial.print("; ");
     Serial.print(step_count);
     Serial.print(" ,");
    Serial.println(calorie);
   
-  
+ /* 
   Serial.print(",");
   Serial.print(rotY);
   Serial.print(" Z=");
@@ -112,7 +107,7 @@ void printData() {
   Serial.print(",");
   Serial.print(" Z=");
   Serial.println(gForceZ);
-
+*/
 
 }
 
